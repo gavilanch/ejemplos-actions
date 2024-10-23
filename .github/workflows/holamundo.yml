@@ -15,9 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Muestra mensaje hola mundo
-        run: 
-           echo "hola mundo, Felipe"
-           echo "otra linea"
+        run: echo "hola mundo, 
+             Felipe"
 
       - name: Checkout
         uses: actions/checkout@v4.2.2
