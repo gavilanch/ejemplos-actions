@@ -4,9 +4,12 @@ on:
    push:
      branches:
       - main
-   pull_request:
-      branches:
-      - main
+     paths:
+        - 'codigo/**'
+        -  '.github/workflows/holamundo.yml'
+   # pull_request:
+   #    branches:
+   #    - main
   # schedule:
   #   - cron: "*/5 * * * *" # ejecuta cada minuto
    workflow_dispatch: # manual
