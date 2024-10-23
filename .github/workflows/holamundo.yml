@@ -3,7 +3,7 @@ name: hola mundo
 on: [push]
 
 jobs:
-  buildksjdkfnsdfjk:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Muestra mensaje hola mundo
