@@ -1,11 +1,12 @@
 name: hola mundo
 
 on:
-  push:
-    branches:
-      - main
-  schedule:
-    - cron: "*/5 * * * *" # ejecuta cada minuto
+  # push:
+  #   branches:
+  #     - main
+  # schedule:
+  #   - cron: "*/5 * * * *" # ejecuta cada minuto
+  workflow_dispatch: # manual
 
 jobs:
   build:
