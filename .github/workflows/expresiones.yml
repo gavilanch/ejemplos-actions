@@ -13,7 +13,7 @@ jobs:
     runs-on: ${{matrix.sistema_operativo}}
     steps:
         - name: paso solo para windows
-          if: ${{ runner.os == 'windows-latest' }}
+          if: ${{ matrix.sistema_operativo == 'windows-latest' }}
           run: echo "Esto solo se ejecuta en windows"
 
         - name: paso para todos los SOs
