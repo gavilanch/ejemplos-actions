@@ -9,4 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Muestra el título del issue
-        run: echo "El titulo del issue es '${{ github.event.issue.title }}'"
+        run: | 
+         echo "El título del issue es: '${{ github.event.issue.title }}'"
