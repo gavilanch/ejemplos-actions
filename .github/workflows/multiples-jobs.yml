@@ -5,13 +5,13 @@ on:
 
 jobs:
   job-1:
-    runs-on: linux-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Imprime nombre job
         run: echo Job 1
 
   job-2:
-    runs-on: windows-latest
+    runs-on: macos-latest
     steps:
       - name: Imprime nombre job
         run: echo Job 2
