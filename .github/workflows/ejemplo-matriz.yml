@@ -10,7 +10,7 @@ jobs:
       matrix:
         sistema_operativo: [windows-latest, ubuntu-latest, macos-latest]
     name: matriz uni-dimensional
-    runs-on: ${{ matriz.sistema_operativo }}
+    runs-on: ${{ matrix.sistema_operativo }}
     steps:
       - name: imprimir SO
-        run: echo Estamos usando el sistema operativo ${{ matriz.sistema_operativo }} 
+        run: echo Estamos usando el sistema operativo ${{ matrix.sistema_operativo }} 
