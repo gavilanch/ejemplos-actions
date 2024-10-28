@@ -7,7 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      ACTIONS_STEP_DEBUG: true
+      ACTIONS_STEP_DEBUG: false
     steps:
       - name: Mensaje de debug
         run: echo "::debug::Este es un mensaje de debug"
