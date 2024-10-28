@@ -1,0 +1,13 @@
+name: debug messages
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      ACTIONS_STEP_DEBUG: true
+    steps:
+      - name: Mensaje de debug
+        run: echo "::debug::Este es un mensaje de debug"
