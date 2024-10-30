@@ -21,3 +21,8 @@ jobs:
           echo 'o variables a nivel de step como esta ${{ env.variable-step }}'
         env:
           variable-step: variable a nivel de un step
+      
+      - run: |
+          echo seguimos con acceso a la variable de WF $variable1
+          echo seguimos con acceso a la variable de job $variable_job
+          echo no tenemos acceso a la variable step ${{env.variable-step}}
