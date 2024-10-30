@@ -5,8 +5,7 @@ on:
 
 # variables a nivel del workflow completo
 env:
-  variable1: Valor de la variable
-  version: 2.0
+  variable_global_1: Valor de la variable
 
 jobs:
   job-1:
@@ -17,8 +16,8 @@ jobs:
     steps:
       - name: step 1 del job-1
         run: |
-          echo el valor de la variable es $variable1
-          echo 'la version del software es ${{ env.version }}'
+          echo el valor de la variable es $variable_global_1
+          echo 'otra forma de escribir la variable ${{ env.variable_global_1 }}'
           echo 'también podemos definir variables a nivel de un único job ${{env.variable_job}}'
           echo 'o variables a nivel de step como esta ${{ env.variable-step }}'
         # variable a nivel del step
@@ -27,7 +26,7 @@ jobs:
 
       - name: step 2 del job-1
         run: |
-          echo seguimos con acceso a la variable de WF $variable1
+          echo seguimos con acceso a la variable de WF $variable_global_1
           echo seguimos con acceso a la variable de job $variable_job
           echo no tenemos acceso a la variable step ${{env.variable-step}}
 
@@ -36,6 +35,6 @@ jobs:
     steps:
       - name: step 1 del job-2
         run: |
-          echo seguimos con acceso a la variable de WF $variable1
+          echo seguimos con acceso a la variable de WF $variable_global_1
           echo no tenemos acceso a la variable de job 1 $variable_job
           echo no tenemos acceso a la variable step ${{env.variable-step}}
