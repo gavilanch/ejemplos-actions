@@ -1,0 +1,16 @@
+name: variables
+
+on:
+  workflow_dispatch:
+
+env:
+  variable1: Valor de la variable
+  version: 2.0
+
+jobs:
+  job-1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo 'el valor de la variable es $variable1'
+          echo 'la version del software es $version'
