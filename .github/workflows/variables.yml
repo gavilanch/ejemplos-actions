@@ -5,14 +5,14 @@ on:
 
 # variables a nivel del workflow completo
 env:
-  variable_global_1: Valor de la variable
+  variable_global_1: VARIABLE GLOBAL
 
 jobs:
   job-1:
     runs-on: ubuntu-latest
     # variable a nivel del job
     env: 
-      variable_job: variable a nivel de este job
+      variable_job: VARIABLE JOB
     steps:
       - name: step 1 del job-1
         run: |
@@ -22,7 +22,7 @@ jobs:
           echo 'o variables a nivel de step como esta ${{ env.variable-step }}'
         # variable a nivel del step
         env:
-          variable-step: variable a nivel de un step
+          variable-step: VARIABLE STEP
 
       - name: step 2 del job-1
         run: |
