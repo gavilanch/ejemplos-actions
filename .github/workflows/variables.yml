@@ -26,3 +26,11 @@ jobs:
           echo seguimos con acceso a la variable de WF $variable1
           echo seguimos con acceso a la variable de job $variable_job
           echo no tenemos acceso a la variable step ${{env.variable-step}}
+
+  job-2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo seguimos con acceso a la variable de WF $variable1
+          echo no tenemos acceso a la variable de job 1 => $variable_job
+          echo no tenemos acceso a la variable step ${{env.variable-step}}
