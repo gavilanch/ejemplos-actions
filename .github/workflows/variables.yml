@@ -12,12 +12,12 @@ jobs:
   job-1:
     runs-on: ubuntu-latest
     env: 
-      variable-job: variable a nivel de este job
+      variable_job: variable a nivel de este job
     steps:
       - run: |
           echo el valor de la variable es $variable1
           echo 'la version del software es ${{ env.version }}'
-          echo 'también podemos definir variables a nivel de un único job ${{variable-job}}'
-          echo 'o variables a nivel de step como esta ${{ variable-step }}'
+          echo 'también podemos definir variables a nivel de un único job ${{env.variable_job}}'
+          echo 'o variables a nivel de step como esta ${{ env.variable-step }}'
         env:
           variable-step: variable a nivel de un step
