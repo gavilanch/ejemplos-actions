@@ -15,7 +15,8 @@ jobs:
     env: 
       variable_job: variable a nivel de este job
     steps:
-      - run: |
+      - name: step 1 del job-1
+        run: |
           echo el valor de la variable es $variable1
           echo 'la version del software es ${{ env.version }}'
           echo 'también podemos definir variables a nivel de un único job ${{env.variable_job}}'
@@ -23,8 +24,9 @@ jobs:
         # variable a nivel del step
         env:
           variable-step: variable a nivel de un step
-      
-      - run: |
+
+      - name: step 2 del job-1
+        run: |
           echo seguimos con acceso a la variable de WF $variable1
           echo seguimos con acceso a la variable de job $variable_job
           echo no tenemos acceso a la variable step ${{env.variable-step}}
@@ -32,7 +34,8 @@ jobs:
   job-2:
     runs-on: ubuntu-latest
     steps:
-      - run: |
+      - name: step 1 del job-2
+        run: |
           echo seguimos con acceso a la variable de WF $variable1
           echo no tenemos acceso a la variable de job 1 $variable_job
           echo no tenemos acceso a la variable step ${{env.variable-step}}
