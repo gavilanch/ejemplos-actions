@@ -3,6 +3,7 @@ name: variables
 on:
   workflow_dispatch:
 
+# variables a nivel del workflow completo
 env:
   variable1: Valor de la variable
   version: 2.0
@@ -10,7 +11,13 @@ env:
 jobs:
   job-1:
     runs-on: ubuntu-latest
+    env: 
+      variable-job: variable a nivel de este job
     steps:
       - run: |
           echo el valor de la variable es $variable1
           echo 'la version del software es ${{ env.version }}'
+          echo también podemos definir variables a nivel de un único job $variable-job
+          echo o variables a nivel de step como esta $variable-step
+        env:
+          variable-step: variable a nivel de un step
