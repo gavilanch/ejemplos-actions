@@ -12,5 +12,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo 'el valor de la variable es $variable1'
-          echo 'la version del software es $version'
+          echo el valor de la variable es $variable1
+          echo 'la version del software es ${{ env.version }}'
